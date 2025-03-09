@@ -4,19 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bulb</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+
+      .button-container {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+      }
+
+      button {
+        padding: 10px 20px;
+        margin: 17px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(57, 34, 189);
+        color: white;
+      }
+
+      button:hover {
+        background-color: #118215;
+      }
+
+      img {
+        display: block;
+        margin: 20px auto;
+      }
+    </style>
   </head>
   <body>
     <h1>The Light Bulb JS Challenge</h1>
     <p>
-      Press "Turn on" to light up the bulb and press "Turn off" to swich off the
-      bulb
+      Press "Turn on" to light up the bulb and press "Turn off" to switch off
+      the bulb.
     </p>
-    <button onclick="document.getElementById('bulb').src='images/bulbOn.jpg'">
-      Turn on
-    </button>
+
+    <div class="button-container">
+      <button onclick="turnOn()">Turn on</button>
+      <button onclick="turnOff()">Turn off</button>
+    </div>
+    <br />
     <img src="images/bulbOff.jpg" id="bulb" style="width: 200px" />
-    <button onclick="document.getElementById('bulb').src='images/bulbOff.jpg'">
-      Turn off
-    </button>
+
+    <script>
+      function turnOn() {
+        document.getElementById("bulb").src = "images/bulbOn.jpg";
+      }
+
+      function turnOff() {
+        document.getElementById("bulb").src = "images/bulbOff.jpg";
+      }
+    </script>
   </body>
 </html>
